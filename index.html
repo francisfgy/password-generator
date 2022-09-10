@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+    <h1 class="section__title">Generate your password!</h1>
+    
+        <div class="label__wrapper">
+            <label class="label__name" for="">Number of characters:</label>
+            <input type="number" min="1" max="50" id="numCharacters">
+        </div>
+        <div class="label__wrapper">
+            <label class="label__name" for="">Include Uppercase:</label>
+            <input type="checkbox" id="uppercase">
+        </div>
+        <div class="label__wrapper">
+            <label class="label__name" for="">Include Symbols:</label>
+            <input type="checkbox" id="symbols">
+        </div>
+        <div class="label__wrapper">
+            <label class="label__name" for="">Include Numbers:</label>
+            <input type="checkbox" id="numbers">
+        </div>
+        <div class="result__wrapper">
+            <button onclick="{determinePasswordRequirements()}"id="generate"class="result__button">Generate</button>
+           <!---- <button onclick="{clearGenerator()}" id="generate" class="result__button">Clear</button> -->
+            <p>Your password is: </p>
+            <form id="result">
+                <input class="result__password" readonly="true" id="result">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
